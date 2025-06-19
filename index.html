@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annuaire des employés service Orange Cameroon</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class="container">
+
+        <!--en tete de la page-->
+
+        <div class="header">
+            <h1> Annuaire des Employés </h1>
+            <p>Service Orange - Gestion du personnel</p>
+        </div>
+
+        <!--Contenu de la page-->
+
+        <div class="content">
+
+            <!-- Section Formulaire-->
+
+            <div class="form-section">
+                <h2>Ajouter un nouvel employé</h2>
+
+                <div class="success-message" id="successMessage">
+                    Employé ajouté avec succès !
+                </div>
+
+                <form id="employeeForm">
+                    <div class="form-group">
+                        <Label for="nom">Nom *</Label>
+                        <input type="text" id="nom" name="nom" required>
+                        <div class="error-message" id="NomError"> Le nom est obligatoire.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <Label for="prenom">prénom *</Label>
+                        <input type="text" id="prenom" name="prenom" required>
+                        <div class="error-message" id="prenomError"> Le prénom est obligatoire.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <Label for="email">Email *</Label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error-message" id="emailError"> L'email est obligatoire.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <Label for="poste">Poste/Fonction *</Label>
+                        <input type="text" id="poste" name="poste" required>
+                        <div class="error-message" id="posteError"> Le poste est obligatoire.</div>
+                    </div>
+
+                    <button type="submit" class="btn">Ajouter l'employé</button>
+                </form>
+  
+            </div>
+
+             <!-- Section Liste des employés-->
+
+             <h2> Liste des employés</h2>
+             <div id="employeesList"></div>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

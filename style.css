@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8e00 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba (0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #ff6b35, #ff8e00);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.content {
+    padding: 40px;
+}
+
+.form-section {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.form-section h2 {
+    color: #ff6b35;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ff6b35;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.form-group input.error {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none;
+}
+
+.btn {
+    background: linear-gradient(135deg, #ff6b35, #ff8e00);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-delete {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.btn-delete:hover {
+    box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+}
+
+.employees-section h2 {
+    color: #ff6b35;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.employees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.employee-card{
+    background: white;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.employee-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: #ff6b35;
+}
+
+.employees-name{
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.employee-info {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.employee-info strong{
+   color: #ff6b35;
+}
+
+.delete-btn-container{
+    text-align: right;
+    margin-top: 15px;
+}
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.empty-state  h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.empty-state p{
+    font-size: 1.1rem;
+}
+
+.success-message{
+    background: #d4edda;
+    color: #155724;
+    padding:15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    display: none;
+}
+
+/* Gestion du responsive*/
+
+/*Tablette*/
+@media (max-width:768px) {
+
+.header h1{
+    font-size: 2rem;
+}
+
+.content{
+    padding: 20px;
+}
+
+.form-section {
+    padding:20px;
+}
+.employees-grid{
+    grid-template-columns: 1fr;
+} 
+}
+/*Ecran de Téléphone*/
+@media (max-width:480px) {
+
+    .header {
+        padding: 20px;
+    }
+    
+    .body{
+        padding: 10px;
+    }
+    
+    .header h1{
+        font-size: 1.8rem;
+    }
+    }
