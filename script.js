@@ -117,7 +117,7 @@ class EmployeeDirectory {
         const errorDiv = document.getElementById(fieldName + 'Error');
 
         input.classList.remove('error');
-        errorDiv.style.display = 'none';
+
     }
 
     clearValidationErrors() {
@@ -211,7 +211,10 @@ class EmployeeDirectory {
     }
 }
 //instantiation d'un objet de EmployeeDirectory
+
+let directory;
+
 document.addEventListener('DOMContentLoaded', () => {
-    window.directory  = new EmployeeDirectory();
+    directory = new EmployeeDirectory();
 });
 //const directory = new EmployeeDirectory();
